@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1629841977141.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "AF2EAB6",
+    "lastKnownWriteTime" : 1629937029,
+    "last_content_update" : 1629937029840,
+    "path" : "C:/partition1/NCSU/Research/Dr. Maity/Proj 3/Package/MKMR/R/pv.R",
+    "project_path" : "R/pv.R",
+    "properties" : {
+        "cursorPosition" : "7,42",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

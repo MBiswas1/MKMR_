@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1629937161285.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2876643815",
+    "id" : "EABF3B5A",
+    "lastKnownWriteTime" : 1629937956,
+    "last_content_update" : 1629937956434,
+    "path" : "C:/partition1/NCSU/Research/Dr. Maity/Proj 3/Package/MKMR/R/linear.kernel.R",
+    "project_path" : "R/linear.kernel.R",
+    "properties" : {
+        "cursorPosition" : "7,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

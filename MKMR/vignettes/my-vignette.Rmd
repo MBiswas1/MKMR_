@@ -1,0 +1,76 @@
+---
+title: "MKMR"
+author: "Mityl Biswas"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{my-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Description
+Return the p-value for function on scalar regression hypothesis testing using MKMR approach, testing if a scalar predictor is correlated to a functional response.
+
+## Model
+$Y_i(t_{ij}) = \sum_{\ell=1}^qZ_{i\ell}\eta_\ell(t_{ij}) + \beta(\mathbf{X}_i, t_{ij}) + \varepsilon_i(t_{ij})$
+where $Y_i(t_{ij})$ is the observed response corresponding to individual $i$ at time $t_{ij}$, $Z_{i\ell}$ is the $\ell^{th}$ observed covariate which is not of interest to us (nuisance) for individual $i$, $\mathbf{X}_i = (X_{i1}, \ldots, X_{ip})^T$, is the vector of observed covariates of interest to us corresponding to $Y_i(t_{ij})$, at time $t_{ij}$ for individual $i$, $\beta(\cdot, \cdot)$ is a function determining how the observed response depends on the covariates of interest,  $\eta_\ell(t_{ij})$ are the regression coefficients of $Z_{i\ell}$, and $\varepsilon_i(t_{ij})$ are error terms for the $i^{th}$ individual at time $t_{ij}$, for $t_{ij}$ belonging to some bounded continuous interval, $i = 1, \ldots, n, j = 1, \ldots, m_i, \ell = 1, \ldots, q$. The $\epsilon_i(\cdot)$ are assumed to be Gaussian processes with mean $\mathbf{0}$, that are independent of each other, for $i = 1, \ldots, n$. We also assume that $\epsilon_i(\cdot)$ are independent of $\beta(\cdot, \cdot)$, $\mathbf{X}_i$ and $Z_{i\ell}$ for $i = 1, \ldots, n, \ell = 1, \ldots, q$. $\mathbf{X}_i$ and $Z_{i\ell}$ are assumed to be independent of each other for $\ell = 1, \ldots, q$. In order to account for the intercept term, we shall specify $Z_{i1} = 1$, for $i = 1, \ldots, n$. We obtain the scores from $Y_i(t_{ij})$ using functional PCA and apply multivariate kernel machine regression on them using linear and quadratic kernels and use Bonferroni's correction and Sidak's correction on them. We also obtain the three parameters obtained on applying SITAR on $Y_i(t_{ij})$ and apply multivariate kernel machine regression on them using linear and quadratic kernels and use Bonferroni's correction and Sidak's correction on them.
+
+## Hypothesis test 
+We test the null hypothesis, $H_0: \beta(\cdot, \cdot) = 0$ against the alternate hypothesis, $H_0: \beta(\cdot, \cdot) \neq 0$.
+
+## Explanation of input variables
+data is a data frame comprising: id, the individual's identifier
+                                 y, the response of the individual
+                                 x, the argument of the response function
+
+Z is a matrix whose each column corresponds to a covariate of interest and each row corresponds to each individual
+
+Cov is a matrix whose each column corresponds to a nuisance covariate and each row corresponds to each individual
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MKMR)
+```
+## Usage
+
+```{r}
+# loading required packages
+  library(mvtnorm)
+```
+## Example Data
+```{r}
+n <- 100 # number of individuals
+m1 <- 14 # mean number of time points 
+a <- 2 # number of time points lie within m1 +- a
+p <- 8 # number of covariates
+q <- 10 # number of nuisance covariates
+mt <- 61 #true m in simulation
+t <- seq(0, mt)/12
+idt <- c(sapply(seq(n), function(x) rep(x, mt)))
+Z <- matrix(runif(n*p),n) # Covariate of interest
+Cov <- matrix(runif(n*q),n) # Nuisance covariates
+data <- NULL
+m.i <- ceiling(runif(n, m1 - a - 1, m1 + a)) 
+data$id <- unlist(sapply(seq(n), function(x) rep(x, m.i[x])))
+s <- seq(mt)
+y <- matrix(runif(n*mt),n)
+  for(i in 1:n)
+  {
+    sam <- sort(sample(s, m.i[i]), decreasing = FALSE)
+    data$y[[i]] <- y[i, sam]
+   data$x[[i]] <- t[sam]
+  }
+data$x <- unlist(data$x)
+data$y <- unlist(data$y)
+```
+## Calling function
+```{r}
+pv(data, Z, Cov)
+```

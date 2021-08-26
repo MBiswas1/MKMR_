@@ -1,0 +1,87 @@
+"0","pv(data, Z, Cov)
+"
+"2","Loading required package: sitar
+"
+"2","Loading required package: nlme
+"
+"2","Loading required package: splines
+"
+"2","Registered S3 method overwritten by 'dplyr':
+  method           from
+  print.rowwise_df     
+"
+"2","Loading required package: refund
+"
+"2","Error in if (nrow(data) <= df) stop(""too few data to fit spline curve"") : 
+  argument is of length zero
+"
+"2","Error in gam(as.vector(G.0) ~ te(row.vec, col.vec, k = nbasis), weights = as.vector(cov.count)) : 
+  Model has more coefficients than data
+"
+"2","no non-missing arguments to min; returning Inf"
+"2","no non-missing arguments to min; returning Inf"
+"2","no non-missing arguments to min; returning Inf"
+"1","$l.sitar
+"
+"1","[1]"
+"1"," -1"
+"1","
+"
+"1","
+"
+"1","$q.sitar
+"
+"1","[1]"
+"1"," -1"
+"1","
+"
+"1","
+"
+"1","$l.fpca
+"
+"1","[1]"
+"1"," -1"
+"1","
+"
+"1","
+"
+"1","$q.fpca
+"
+"1","[1]"
+"1"," -1"
+"1","
+"
+"1","
+"
+"1","$sit.bon
+"
+"1","[1]"
+"1"," 1"
+"1","
+"
+"1","
+"
+"1","$sit.sid
+"
+"1","[1]"
+"1"," Inf"
+"1","
+"
+"1","
+"
+"1","$pca.bon
+"
+"1","[1]"
+"1"," 1"
+"1","
+"
+"1","
+"
+"1","$pca.sid
+"
+"1","[1]"
+"1"," Inf"
+"1","
+"
+"1","
+"

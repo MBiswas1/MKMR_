@@ -1,0 +1,15 @@
+Package: MKMR
+Type: Package
+Title: Determines p-values for testing if a scalar predictor is correlated to a functional response.
+Version: 0.1.0
+Author: Mityl Biswas
+Maintainer: Mityl Biswas <mbiswas@ncsu.edu>
+Description: A functional response variable Y is regressed on scalar variables X and Z to determine if X is a significantly associated with Y. We obtain the three 
+    outputs from SITAR and the scores obtained from fpca with 95% pve and use multivariate kernel machine regression on them to get p-values using linear and 
+    quadratic kernels
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1629944209931.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "898DDEDB",
+    "lastKnownWriteTime" : 1629947958,
+    "last_content_update" : 1629947958105,
+    "path" : "C:/partition1/NCSU/Research/Dr. Maity/Proj 3/Package/MKMR/vignettes/my-vignette.Rmd",
+    "project_path" : "vignettes/my-vignette.Rmd",
+    "properties" : {
+        "cursorPosition" : "16,292",
+        "last_setup_crc32" : "44BA668Bddfabac",
+        "scrollLine" : "12"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

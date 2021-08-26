@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1629937757965.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DE8D1D04",
+    "lastKnownWriteTime" : 1629939768,
+    "last_content_update" : 1629939768679,
+    "path" : "C:/partition1/NCSU/Research/Dr. Maity/Proj 3/Package/MKMR/R/Parametric_MR.R",
+    "project_path" : "R/Parametric_MR.R",
+    "properties" : {
+        "cursorPosition" : "67,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

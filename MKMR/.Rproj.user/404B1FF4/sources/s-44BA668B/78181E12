@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1629939780866.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "78181E12",
+    "lastKnownWriteTime" : 1629942919,
+    "last_content_update" : 1629942919473,
+    "path" : "C:/partition1/NCSU/Research/Dr. Maity/Proj 3/Package/MKMR/R/Global_test_MKMR.R",
+    "project_path" : "R/Global_test_MKMR.R",
+    "properties" : {
+        "cursorPosition" : "14,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
